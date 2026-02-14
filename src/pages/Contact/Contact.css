@@ -1,0 +1,68 @@
+.contact {
+  min-height: 80vh;
+  padding: 100px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: #ffffff;
+}
+
+/* Heading */
+.contact h1 {
+  font-size: 48px;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+/* Description */
+.contact p {
+  max-width: 650px;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+/* Button */
+.contact button {
+  padding: 14px 28px;
+  border-radius: 30px;
+  border: 1px solid black;
+  background: black;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 25px;
+}
+
+.contact button:hover {
+  background: white;
+  color: black;
+}
+
+/* OR FIND ME ON text */
+.contact p:last-child {
+  font-size: 13px;
+  letter-spacing: 2px;
+  color: #999;
+  margin-top: 10px;
+}
+.social-links {
+  display: flex;
+  gap: 25px;
+  margin-top: 15px;
+}
+
+.social-links a {
+  text-decoration: none;
+  color: black;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.social-links a:hover {
+  color: #555;
+}
+
