@@ -17,9 +17,9 @@
 }
 
 .navbar.scrolled {
-  background: rgba(255, 255, 255, 0.6);  /* semi-transparent */
-  backdrop-filter: blur(15px);          /* glass blur */
-  -webkit-backdrop-filter: blur(15px);  /* safari support */
+  background: rgba(255, 255, 255, 0.6); /* semi-transparent */
+  backdrop-filter: blur(15px); /* glass blur */
+  -webkit-backdrop-filter: blur(15px); /* safari support */
   padding: 12px 40px; /* slightly smaller */
 }
 
@@ -37,7 +37,6 @@
   border: 1px solid #ddd;
   border-radius: 30px;
   padding: 12px 25px;
-  
 }
 
 .nav-links {
@@ -86,6 +85,3 @@
 .nav-right a img {
   width: 18px;
 }
-
-
-

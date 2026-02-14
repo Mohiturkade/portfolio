@@ -9,24 +9,22 @@ const Navbar = () => {
   const [isScroll, setIsScroll] = useState(false);
 
   useEffect(() => {
-     window.addEventListener('scroll', () => {
-      if(scrollY > 50){
-        setIsScroll(true)
+    window.addEventListener("scroll", () => {
+      if (scrollY > 50) {
+        setIsScroll(true);
+      } else {
+        setIsScroll(false);
       }
-      else{
-        setIsScroll(false)
-      }
-     }
-   )
-  }, [])
+    });
+  }, []);
 
   return (
-    <nav className={`navbar ${isScroll? 'scrolled' : ""}`}>
+    <nav className={`navbar ${isScroll ? "scrolled" : ""}`}>
       <div className="logo">
         <img src={Logo} alt="mohit-logo" />
       </div>
 
-      <div className='nav-middle'>
+      <div className="nav-middle">
         <ul className="nav-links">
           <li>HOME</li>
           <li>ABOUT ME</li>
@@ -51,4 +49,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
