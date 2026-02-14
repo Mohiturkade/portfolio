@@ -5,15 +5,15 @@ import RightArrow from "../../assets/right-up.png";
 
 const Header = () => {
   return (
-    <div className="header">
+    <div className="header" id="home">
       <img src={ProfilePic} alt="profile-pic" />
       <h2>Hi! I'm Mohit Urkade</h2>
       <h1>Frontend web developer</h1>
-      <h1>based in india</h1>
+      {/* <h1>based in india</h1> */}
       <p>
-        I am frontend developer from maharashtra with 2 years of experiance{" "}
+        A creative Frontend Developer who loves building sleek, high-performance web applications. Fueled by curiosity and innovation, I turn ideas into seamless digital experiences using modern web technologies.
       </p>
-      <p>companies like Microsoft . Tesla and Apple</p>
+      <p></p>
 
       <div className="buttons">
         <button> View My Work </button>
@@ -26,3 +26,4 @@ const Header = () => {
 };
 
 export default Header;
+

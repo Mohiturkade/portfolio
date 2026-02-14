@@ -1,44 +1,85 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Projects.css";
-import { useState } from "react";
 import { projects } from "../../assets/assets";
 
 const Projects = () => {
   const [filter, setFilter] = useState("all");
 
+ 
   const filteredProjects =
     filter === "all"
       ? projects
-      : skills.filter((skill) => skill.category === filter);
+      : projects.filter((project) => project.category === filter);
 
   return (
-    <div className="projects">
+    <section className="projects" id="projects">
       <h1>Featured Projects</h1>
       <p>
-        A showcase of my work spanning AI/ML, full-stack development, and
-        innovative SaaS solutions
+        A showcase of my work spanning full-stack development and modern web
+        applications.
       </p>
 
+      {/* Filter Buttons */}
       <div className="filter-buttons">
-        <button onClick={() => setFilter("all")}>All</button>
-        <button onClick={() => setFilter("frontend")}>Frontend</button>
-        <button onClick={() => setFilter("backend")}>Backend</button>
+        <button
+          className={filter === "all" ? "active" : ""}
+          onClick={() => setFilter("all")}
+        >
+          All
+        </button>
+        <button
+          className={filter === "frontend" ? "active" : ""}
+          onClick={() => setFilter("frontend")}
+        >
+          Frontend
+        </button>
+        <button
+          className={filter === "backend" ? "active" : ""}
+          onClick={() => setFilter("backend")}
+        >
+          Backend
+        </button>
+        <button
+          className={filter === "fullstack" ? "active" : ""}
+          onClick={() => setFilter("fullstack")}
+        >
+          Fullstack
+        </button>
       </div>
 
-      {/* skills grid */}
+      {/* Projects Grid */}
       <div className="projects-grid">
         {filteredProjects.map((project, index) => (
           <div key={index} className="project-card">
-            <img src={project.image} alt={project.name} width={"300"} />
-            <div className="project-detail-card">
-              <p>{project.title}</p>
+            <img src={project.image} alt={project.title} />
+
+            <div className="project-info">
+              <h3>{project.title}</h3>
               <p>{project.description}</p>
+
+              {/* Tech badges */}
+              <div className="tech-stack">
+                {project.tech.map((tech, i) => (
+                  <span key={i}>{tech}</span>
+                ))}
+              </div>
+
+              {/* Buttons */}
+              <div className="project-links">
+                <a href={project.live} target="_blank" rel="noreferrer">
+                  Live
+                </a>
+                <a href={project.github} target="_blank" rel="noreferrer">
+                  GitHub
+                </a>
+              </div>
             </div>
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 
 export default Projects;
+

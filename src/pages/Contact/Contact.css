@@ -1,67 +1,59 @@
 .contact {
-  min-height: 80vh;
-  padding: 100px 40px;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  text-align: center;
-  background: #ffffff;
+  align-items: center;
 }
-
-/* Heading */
-.contact h1 {
-  font-size: 48px;
-  font-weight: 400;
+/* Contact Form */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+ justify-content: center;
+  gap: 15px;
+  width: 400px;
+  max-width: 90%;
   margin-bottom: 20px;
+ 
 }
 
-/* Description */
-.contact p {
-  max-width: 650px;
-  color: #666;
-  line-height: 1.6;
-  margin-bottom: 30px;
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+  font-size: 14px;
 }
 
-/* Button */
-.contact button {
-  padding: 14px 28px;
+.contact-form textarea {
+  min-height: 100px;
+  resize: none;
+}
+
+.contact-form button {
+  padding: 12px;
   border-radius: 30px;
-  border: 1px solid black;
+  border: none;
   background: black;
   color: white;
-  font-size: 14px;
   cursor: pointer;
-  transition: all 0.3s ease;
-  margin-bottom: 25px;
+  transition: 0.3s ease;
 }
 
-.contact button:hover {
-  background: white;
-  color: black;
+.contact-form button:hover {
+  background: #333;
 }
 
-/* OR FIND ME ON text */
-.contact p:last-child {
+.success {
+  color: green;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.social-title {
   font-size: 13px;
   letter-spacing: 2px;
   color: #999;
-  margin-top: 10px;
-}
-.social-links {
-  display: flex;
-  gap: 25px;
-  margin-top: 15px;
+  margin-top: 20px;
 }
 
-.social-links a {
-  text-decoration: none;
-  color: black;
-  font-size: 14px;
-  transition: 0.3s;
-}
-
-.social-links a:hover {
-  color: #555;
-}

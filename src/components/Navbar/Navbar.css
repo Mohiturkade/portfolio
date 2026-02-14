@@ -17,10 +17,10 @@
 }
 
 .navbar.scrolled {
-  background: rgba(255, 255, 255, 0.6); /* semi-transparent */
-  backdrop-filter: blur(15px); /* glass blur */
-  -webkit-backdrop-filter: blur(15px); /* safari support */
-  padding: 12px 40px; /* slightly smaller */
+   background: rgba(255, 255, 255, 0.3); 
+  backdrop-filter: blur(20px); 
+  -webkit-backdrop-filter: blur(20px);
+  padding: 12px 40px;
 }
 
 /* Logo */

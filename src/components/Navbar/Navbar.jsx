@@ -7,6 +7,7 @@ import Download from "../../assets/downlaod.png";
 
 const Navbar = () => {
   const [isScroll, setIsScroll] = useState(false);
+  const [active, setActive] = useState("home");
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
@@ -18,6 +19,13 @@ const Navbar = () => {
     });
   }, []);
 
+   const handleClick = (section) => {
+    setActive(section);
+    document.getElementById(section)?.scrollIntoView({
+      behavior: "smooth",
+    });
+  };
+
   return (
     <nav className={`navbar ${isScroll ? "scrolled" : ""}`}>
       <div className="logo">
@@ -26,11 +34,36 @@ const Navbar = () => {
 
       <div className="nav-middle">
         <ul className="nav-links">
-          <li>HOME</li>
-          <li>ABOUT ME</li>
-          <li>SKILLS</li>
-          <li>PROJECTS</li>
-          <li>CONTACT ME</li>
+         <li
+          className={active === "home" ? "active" : ""}
+          onClick={() => handleClick("home")}
+        >
+          HOME
+        </li>
+        <li
+          className={active === "about" ? "active" : ""}
+          onClick={() => handleClick("about")}
+        >
+          ABOUT
+        </li>
+        <li
+          className={active === "skills" ? "active" : ""}
+          onClick={() => handleClick("skills")}
+        >
+          SKILLS
+        </li>
+        <li
+          className={active === "projects" ? "active" : ""}
+          onClick={() => handleClick("projects")}
+        >
+          PROJECTS
+        </li>
+        <li
+          className={active === "contact" ? "active" : ""}
+          onClick={() => handleClick("contact")}
+        >
+          CONTACT
+        </li>
         </ul>
       </div>
 
